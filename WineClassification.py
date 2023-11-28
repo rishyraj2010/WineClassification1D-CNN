@@ -379,8 +379,6 @@ model.save('white_wine_pipeline_1DCNN')
 # Saving model to disk
 pickle.dump(model, open('white_wine_pipeline_1DCNN.pkl','wb'))
 
-import pickle
-
 # Saving model to disk
 pickle.dump(final_best, open('white_wine_pipeline_pycaret2.pkl','wb'))
 
