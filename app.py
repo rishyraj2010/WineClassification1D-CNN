@@ -3,10 +3,8 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 import joblib as joblib
 import os
-import tensorflow as tf
 
-model=joblib.load('iris_model_LR.pkl')
-scaler=joblib.load('scaler.save')
+model=joblib.load('white_wine_pipeline_1DCNN.pkl')
 
 app =Flask(__name__)
 
@@ -18,7 +16,6 @@ def index():
 @app.route('/',methods=['GET','POST'])
 def home():
     if request.method =='POST':
-        model = tf.keras.models.load_model('white_wine_pipeline_1DCNN.keras')
         output = np.argmax(model.predict([[[ 1.57912294],
        [ 1.32836936],
        [ 0.27590734],
